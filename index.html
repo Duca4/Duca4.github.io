@@ -18,10 +18,29 @@
             <label for="phone">phone #:</label>
             <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890">
         <br>
-        <label for="quantityInput">Quantity:</label>
-        <input type="number" id="quantityInput">
-        <button id="calculateButton">Calculate Total</button>
-        <div id="totalResult"></div>
- </form>
+ <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="0" value="0">
+
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+    <label for="total">Total:</label>
+    <input type="text" id="total" name="total" readonly>
+  </form>
+
+  <script>
+    function calculateTotal() {
+      // Retrieve the quantity from the form
+      var quantityInput = document.getElementById("quantity");
+      var quantity = parseInt(quantityInput.value);
+
+      // Calculate the total
+      var pricePerItem = 5;
+      var total = quantity * pricePerItem;
+
+      // Display the total in the form
+      var totalInput = document.getElementById("total");
+      totalInput.value = total;
+    }
+  </script>
 </body>
 </html>
