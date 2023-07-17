@@ -2,8 +2,28 @@
 <html>
 <head>
     <title>My first form</title>
+    <script>
+    function calculateTotal() {
+      // Retrieve the quantity entered by the user
+      var quantity = parseInt(document.getElementById("quantity").value);
+
+      // Calculate the total
+      var total = quantity * 5;
+
+      // Display the total in the result field
+      document.getElementById("total").value = total;
+    }
+  </script>
 </head>
 <body>
+    <h1>Candle Shop</h1>
+  <form>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="0" value="0">
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <label for="total">Total:</label>
+    <input type="number" id="total" readonly>
+  </form>
     <form>
     <h1>My first form</h1> 
             <label for="fname">first name:</label>
