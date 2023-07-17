@@ -18,6 +18,12 @@
             <label for="phone">phone #:</label>
             <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890">
         <br>
-  </script>
+    <form>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="0" value="0">
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <label for="total">Total:</label>
+    <input type="number" id="total" readonly>
+  </form>
 </body>
 </html>
